@@ -1,0 +1,27 @@
+/* Zoom animation effect */
+.zoom-button {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zoom-button:hover {
+    transform: scale(1.1); /* Agrandir légèrement le bouton */
+    background-color: #e74a3b; /* Changer la couleur de fond */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ajouter une ombre portée pour donner l'impression que le bouton s'élève */
+}
+
+/* Ajout d'une animation d'entré pour l'effet de fade-in lors du chargement */
+.animated-button {
+    animation: fadeInButton 1s ease-out;
+}
+
+/* Animation d'entrée pour le bouton au chargement */
+@keyframes fadeInButton {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Le bouton commence légèrement plus bas */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Le bouton revient à sa position normale */
+    }
+}
