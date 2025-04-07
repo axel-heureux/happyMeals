@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ma Liste de Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet/index.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-dark text-white">
+    <nav class="navbar navbar-expand-lg bg-light fade-in">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"> <span class="highlight">Happy</span>Meal </a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link text-dark" href="recettes.html">Nos recettes</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="liste_course.html">Mes Courses</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="planning.html">Planning de la Semaine</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="favoris.html">Favoris</a></li>
+                </ul>
+            </div>
+            <!-- Dans la navbar, remplacez la div search-bar existante par : -->
+            <div class="mb-3 position-relative">
+                <input type="text" id="search-bar" class="form-control" placeholder="Rechercher une recette ou un ingrédient...">
+                <ul id="autocomplete-list" class="list-group position-absolute w-100 z-3"></ul>
+            </div>  
+        </div>
+    </nav>
+
+    <div class="container text-center mt-4 fade-in">
+        <h2>Ma liste de <span class="highlight-text">Courses</span></h2>
+        <div class="input-group my-3">
+            <input type="text" id="ingredientInput" class="form-control" placeholder="Ajouter un ingrédient">
+            <button id="btn-ajouter" class="btn btn-orange">AJOUTER</button>
+        </div>
+        <ul id="ingredientList" class="list-group"></ul>
+        <button id="btn-exporter" class="btn btn-orange mt-3">EXPORTER</button>
+        <button id="btn-supprimer" class="btn btn-secondary mt-3">SUPPRIMER</button>
+    </div>
+
+    <!-- JS externe pour la logique -->
+    <script src="js/liste_courses.js"></script>
+</body>
+</html>
